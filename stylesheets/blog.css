@@ -1,0 +1,16 @@
+.orangething {
+	color: #6EFF33;
+}
+
+#blogheader {
+  font-size: 60px;
+  color: red;
+}
+
+td {
+  color: blue;
+}
+
+.awesomeimage {
+  background-image: url("https://i5.walmartimages.com/asr/9f6e5577-aaf6-4f79-a234-0747c5f59848_1.af2853f40315337896c61ccf3823f6f0.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF");
+}
