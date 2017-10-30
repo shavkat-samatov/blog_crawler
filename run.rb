@@ -1,9 +1,7 @@
 require './crawler.rb'
 require './blog_post.rb'
 
-# julias_blog = BlogPost.new
-# julias_blog.name = 'Crawler 101 girl power'
-# julias_blog.author = 'Julia'
+url = "https://gapintelligence.com/blog"
 
 crawler = Crawler.new
-crawler.crawl
+crawler.crawl(url)

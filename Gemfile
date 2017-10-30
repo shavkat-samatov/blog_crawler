@@ -1,0 +1,13 @@
+source 'http://rubygems.org'
+
+gem 'nokogiri', '<= 1.6.7.rc'
+gem 'mechanize', '2.7'
+gem 'trollop', '2.0'
+gem 'awesome_print', '1.1.0'
+gem 'fakeweb', '1.3.0'
+gem 'rb-readline', '0.5.0'
+gem 'rack', '~> 1.5'
+gem 'lite_config', '0.0.3'
+gem 'redis', '3.1.0'
+gem 'i18n', '>= 0.6.9'
+gem 'activesupport'
