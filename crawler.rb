@@ -10,8 +10,12 @@ class Crawler
     agent = Mechanize.new
     agent.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-    page = agent.get(page_url)
+    blog_page = agent.get(page_url)
 
-    puts page.extract('h1')
+    url = blog_page.resolve_url(blog_page.extract('.b-post a', attr: :href))
+
+    post_page = agent.get(url)
+
+    puts post_page.extract("h1")
   end
 end
