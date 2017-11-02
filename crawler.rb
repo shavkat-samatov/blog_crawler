@@ -6,16 +6,12 @@ require './blog_post.rb'
 require './lib/mechanize_adapter.rb'
 
 class Crawler
-  def crawl(page_url)
+  def crawl(blog_url)
     agent = Mechanize.new
     agent.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-    blog_page = agent.get(page_url)
+    blog_page = agent.get(blog_url)
 
-    url = blog_page.resolve_url(blog_page.extract('.b-post a', attr: :href))
-
-    post_page = agent.get(url)
-
-    puts post_page.extract("h1")
+    puts blog_page.uri.to_s
   end
 end
