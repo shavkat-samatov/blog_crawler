@@ -12,6 +12,6 @@ class Crawler
 
     blog_page = agent.get(blog_url)
 
-    puts blog_page.uri.to_s
+    puts blog_page.extract('h1')
   end
 end
