@@ -6,12 +6,10 @@ require './blog_post.rb'
 require './lib/mechanize_adapter.rb'
 
 class Crawler
-  def crawl(blog_url)
+  def crawl(url)
     agent = Mechanize.new
     agent.agent.http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-    blog_page = agent.get(blog_url)
-
-    puts blog_page.title
+    page = agent.get(url)
   end
 end
